@@ -1,77 +1,72 @@
- /* General container styling */
+body {
+  background-color: #333;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
 .form {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 20px;
-  background-color:  #333;
-  border-radius: 8px;
-  height:470px;
-  width:1000px;
-}
-body{
   background-color: #333;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: auto;
+  height: auto;
+  width: 90%;
 }
 
 .left {
   flex: 1;
-  margin-right: 180px;
-  height:400px;
-  width:2000px;
+  margin-bottom: 20px;
+  height: auto;
   background-color: #928c8c;
   border-radius: 17px;
-   
+  padding: 10px;
 }
 
 .box {
-  width: 160%;
-  height: 100%;
-  background-color: #979090 ;
+  width: 100%;
+  height: auto;
+  background-color: #979090;
   border-radius: 15px;
-  border:2px solid rgb(11, 138, 184);
 }
 
 .right {
   flex: 3;
   display: flex;
   flex-direction: column;
-  height:400px;
-  width:50px;
+  width: 100%;
 }
 
-.right-top {
-  height:50%;
-  width:80%;
+.right-top, .right-below {
+  width: 100%;
   padding: 20px;
   background-color: #504d4d;
   margin-bottom: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.right-below {
-  height:50%;
-  width:80%;
-  padding: 20px; 
-  background-color: #504d4d;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+
 .tab-buttons {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
 .tab-button {
   font-size: 18px;
-  height:60px;
-  width:170px;
-  padding: 8px 20px;
+  padding: 10px 20px;
   background-color: #f0f0f0;
   color: #333;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   margin-right: 10px;
+  margin-bottom: 10px;
+  flex: 1;
 }
 
 .tab-button.active {
@@ -81,17 +76,16 @@ body{
 
 .tab-content {
   margin-top: 20px;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
-.about-me-description,
-.experiences-list,
-.recommended-list {
+.about-me-description, .experiences-list, .recommended-list {
   font-size: 16px;
   color: white;
 }
 
-.experiences-list li,
-.recommended-list li {
+.experiences-list li, .recommended-list li {
   margin-bottom: 8px;
 }
 
@@ -99,39 +93,44 @@ body{
 .gallery-header {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
-.gallery-header>button{
+
+.gallery-header > button {
   font-size: 18px;
-  height:60px;
-  width:170px;
   padding: 8px 20px;
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: #333;
+  color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .gallery-title {
   font-size: 22px;
   margin-right: auto;
+  margin-bottom: 10px;
 }
 
-.add-image-button,
-.nav-button {
+.add-image-button {
   font-size: 16px;
   padding: 10px 20px;
-  margin-left: 10px;
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
-.nav-button {
+.gallery > .nav-button {
+  padding: 10px 20px;
+  margin: 10px;
   background-color: #555;
+  border-radius: 50%;
 }
 
 .gallery-images {
@@ -146,4 +145,29 @@ body{
   height: 100px;
   object-fit: cover;
   border-radius: 4px;
+}
+
+/* Media Queries for Laptop Screens */
+@media (min-width: 1024px) {
+  .form {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .left {
+    margin-right: 20px;
+    height: auto;
+  }
+
+  .right {
+    height: auto;
+  }
+
+  .tab-buttons {
+    flex-wrap: nowrap;
+  }
+
+  .gallery-header {
+    flex-wrap: nowrap;
+  }
 }

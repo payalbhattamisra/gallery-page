@@ -50,8 +50,17 @@ const AboutMe = () => {
               {selectedTab === 'about' && (
                 <div className="about-me">
                   <p className="about-me-description">
-                    Hi, I'm Payal. I'm passionate about frontend and backend development, and I love participating in hackathons.
-                  </p>
+  Hi, I'm Payal Bhattamisra, a passionate and dedicated software developer with a strong focus on both frontend and backend technologies. My journey in coding began in my early college days, and since then, I've been constantly honing my skills by participating in various hackathons and coding challenges.
+
+  As the Vice President of my college's coding club, I've had the opportunity to lead and mentor my peers, organizing workshops on technologies like React and GitHub. I'm always eager to learn new things, which has driven me to explore diverse fields within software development, from AI and machine learning to web development and UI/UX design.
+
+  I was honored to win the Smart India Hackathon 2023, where I worked on a project in the travel and tourism domain. Additionally, I reached the national level in the Google Solution Challenge, where I contributed to a project focused on marine ecosystem preservation.
+
+  In my free time, I love traveling and exploring new places, which has also inspired some of the projects I've worked on, like "Ghumo Bharat," a travel and tourism website aimed at providing personalized travel experiences.
+
+  I'm always on the lookout for new challenges and opportunities to grow, whether it's through contributing to open-source projects, working on innovative ideas, or collaborating with like-minded individuals.
+</p>
+
                 </div>
               )}
 
@@ -61,6 +70,7 @@ const AboutMe = () => {
                     <li>Smart India Hackathon 2023 - Winner</li>
                     <li>Google Solution Challenge - National Level</li>
                     <li>Vice President of Coding Club</li>
+                    {/* Add more experiences here */}
                   </ul>
                 </div>
               )}
@@ -71,6 +81,7 @@ const AboutMe = () => {
                     <li>Ghumo Bharat - Travel and Tourism Website</li>
                     <li>Review Sentiment Analysis - React App</li>
                     <li>Task Management Application</li>
+                    {/* Add more projects here */}
                   </ul>
                 </div>
               )}
